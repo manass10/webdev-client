@@ -16,12 +16,12 @@ export default function ListTags() {
       </ol>
 
       My favorite recipe: Butter Chicken
-      <ol id="wd-my-favorite-recipe">
+      <ol id="wd-your-favorite-recipe">
         <li>Marinate chicken in yogurt and spices.</li>
         <li>Cook onions, garlic, and ginger in a pan.</li>
         <li>Add tomato puree and spices to the pan.</li>
       </ol>
-
+      
       <h5>Unordered List Tag</h5>
       My favorite books (in no particular order)
       <ul id="wd-my-books">
