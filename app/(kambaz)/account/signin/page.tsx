@@ -2,24 +2,33 @@ import Link from "next/link";
 
 export default function Signin() {
   return (
-    <div id="wd-signin-screen">
-      <h1>Sign in</h1>
-      <label htmlFor="wd-signin-username">Username:</label>
-      <br />
+    <div id="wd-signin-screen" className="max-w-sm">
+      <h1 className="mb-3 text-2xl font-semibold">Sign in</h1>
       <input
-        type="text"
-        id="wd-signin-username"
-        placeholder="Sign in with your Canvas email"
+        placeholder="username"
+        defaultValue="ada"
+        className="wd-username mb-2 w-full rounded border border-neutral-300 px-3 py-2"
       />
-      <br />
-      <label htmlFor="wd-signin-password">Password:</label>
-      <br />
-      <input type="password" id="wd-signin-password" />
-      <br />
-     
-      <Link href="/dashboard" id="wd-signin-submit">
+      <input
+        placeholder="password"
+        type="password"
+        defaultValue="123"
+        className="wd-password mb-2 w-full rounded border border-neutral-300 px-3 py-2"
+      />
+      <Link
+        id="wd-signin-submit"
+        href="/dashboard"
+        className="mb-2 block w-full rounded bg-blue-600 px-3 py-2 text-center text-white no-underline"
+      >
         Sign in
       </Link>
+      <Link id="wd-signup-link" href="/account/signup" className="text-sm text-blue-600">
+        Sign up
+      </Link>
+      {/* TODO (On your own): keep styling consistent with the rest of the account screens */}
+      <p id="wd-ai-signin-note" className="mt-4 text-xs text-neutral-500">
+        Sample note: this is a rough prototype — no real authentication yet.
+      </p>
     </div>
   );
 }

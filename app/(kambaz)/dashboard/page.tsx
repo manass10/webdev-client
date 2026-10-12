@@ -1,43 +1,46 @@
 import CourseCard from "./CourseCard";
 
 export default function Dashboard() {
-  const courses = [
-    {
-      id: "1234",
-      number: "CS 5610",
-      name: "Web Development",
-      description: "Full-stack Next.js web application development.",
-    },
-    {
-      id: "5678",
-      number: "CS 5800",
-      name: "Algorithms",
-      description: "Design and analysis of algorithms.",
-    },
-    {
-      id: "9012",
-      number: "CS 5200",
-      name: "Database Management Systems",
-      description: "Relational and NoSQL database design.",
-    },
-  ];
-
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1>
       <hr />
-      <h2>Published Courses ({courses.length})</h2>
+      <h2 id="wd-dashboard-published">Published Courses (4)</h2>
       <hr />
-      <div id="wd-dashboard-courses" style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        {courses.map((course) => (
-          <CourseCard
-            key={course.id}
-            id={course.id}
-            number={course.number}
-            name={course.name}
-            description={course.description}
-          />
-        ))}
+      <div
+        id="wd-dashboard-courses"
+        className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
+      >
+        <CourseCard
+          id="1234"
+          title="CS1234 React JS"
+          subtitle="Full Stack software developer"
+          image="/images/reactjs.svg"
+        />
+        <CourseCard
+          id="2345"
+          title="CS2345 Node JS"
+          subtitle="Server side JavaScript"
+          image="/images/nodejs.svg"
+        />
+        <CourseCard
+          id="3456"
+          title="CS3456 MongoDB"
+          subtitle="NoSQL Databases"
+          image="/images/mongodb.svg"
+        />
+        <CourseCard
+          id="4567"
+          title="CS5610 Web Development"
+          subtitle="Full-stack Next.js apps, styled with CSS and Tailwind"
+          image="/images/reactjs.svg"
+        />
+        <CourseCard
+          id="9999"
+          title="CS9999 Sample Course"
+          subtitle="Assistant-generated sample — not my course"
+          image="/images/reactjs.svg"
+        />
       </div>
     </div>
   );

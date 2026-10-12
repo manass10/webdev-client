@@ -1,46 +1,31 @@
 import Link from "next/link";
 
 export default function Profile() {
+  const field = "mb-2 w-full rounded border border-neutral-300 px-3 py-2";
   return (
-    <div id="wd-profile-screen">
-      <h1>Profile</h1>
-      <label htmlFor="wd-profile-username">Username:</label>
-      <br />
-      <input type="text" id="wd-profile-username" defaultValue="jdoe" />
-      <br />
-      <label htmlFor="wd-profile-password">Password:</label>
-      <br />
-      <input type="password" id="wd-profile-password" />
-      <br />
-      <label htmlFor="wd-profile-first-name">First Name:</label>
-      <br />
-      <input type="text" id="wd-profile-first-name" defaultValue="Jane" />
-      <br />
-      <label htmlFor="wd-profile-last-name">Last Name:</label>
-      <br />
-      <input type="text" id="wd-profile-last-name" defaultValue="Doe" />
-      <br />
-      <label htmlFor="wd-profile-dob">Date of Birth:</label>
-      <br />
-      <input type="date" id="wd-profile-dob" defaultValue="2000-01-21" />
-      <br />
-      <label htmlFor="wd-profile-email">Email:</label>
-      <br />
+    <div id="wd-profile-screen" className="max-w-sm">
+      <h1 className="mb-3 text-2xl font-semibold">Profile</h1>
+      <input placeholder="username" defaultValue="jdoe" className={field} />
+      <input placeholder="password" type="password" className={field} />
+      <input placeholder="First Name" defaultValue="Jane" className={field} />
+      <input placeholder="Last Name" defaultValue="Doe" className={field} />
+      <input type="date" defaultValue="2000-01-21" className={field} />
       <input
+        placeholder="email"
         type="email"
-        id="wd-profile-email"
         defaultValue="jdoe@northeastern.edu"
+        className={field}
       />
-      <br />
-      <label htmlFor="wd-profile-role">Role:</label>
-      <br />
-      <select id="wd-profile-role" defaultValue="STUDENT">
+      <select defaultValue="STUDENT" className={field}>
         <option value="STUDENT">Student</option>
         <option value="FACULTY">Faculty</option>
         <option value="ADMIN">Admin</option>
       </select>
-      <br />
-      <Link href="/account/signin" id="wd-signout-btn">
+      <Link
+        id="wd-signout-submit"
+        href="/account/signin"
+        className="mt-2 block w-full rounded bg-neutral-700 px-3 py-2 text-center text-white no-underline"
+      >
         Sign out
       </Link>
     </div>

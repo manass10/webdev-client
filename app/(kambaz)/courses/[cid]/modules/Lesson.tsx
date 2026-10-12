@@ -1,18 +1,20 @@
+import type { ReactNode } from "react";
+import GreenCheckmark from "./GreenCheckmark";
+
 export default function Lesson({
-  lesson,
+  title,
+  children,
 }: {
-  lesson: { id: string; title: string; contentItems?: string[] };
+  title: string;
+  children?: ReactNode;
 }) {
   return (
-    <li id={`wd-lesson-${lesson.id}`} style={{ padding: "0.25rem 0" }}>
-      {lesson.title}
-      {lesson.contentItems && lesson.contentItems.length > 0 && (
-        <ul id={`wd-lesson-${lesson.id}-content-items`}>
-          {lesson.contentItems.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      )}
+    <li className="wd-lesson border-l-[3px] border-green-600 p-3 pl-1">
+      <div className="flex items-center justify-between">
+        <span className="wd-title">{title}</span>
+        <GreenCheckmark />
+      </div>
+      <ul className="wd-content mt-2 list-disc pl-6">{children}</ul>
     </li>
   );
 }

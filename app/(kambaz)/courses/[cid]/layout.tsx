@@ -11,15 +11,11 @@ export default async function CourseLayout({
   const { cid } = await params;
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          <td valign="top" width="120px">
-            <CourseNavigation cid={cid} />
-          </td>
-          <td valign="top">{children}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="flex gap-4">
+      <div className="hidden w-[140px] shrink-0 md:block">
+        <CourseNavigation cid={cid} />
+      </div>
+      <div className="min-w-0 flex-1">{children}</div>
+    </div>
   );
 }
