@@ -1,0 +1,7 @@
+[
+  { "_id": "a1", "title": "A1 - HTML User Interfaces", "course": "1234", "points": 125, "due": "2026-09-27" },
+  { "_id": "a2", "title": "A2 - CSS and Tailwind", "course": "1234", "points": 125, "due": "2026-10-11" },
+  { "_id": "a3", "title": "A3 - JavaScript and Components", "course": "1234", "points": 125, "due": "2026-10-25" },
+  { "_id": "a4", "title": "A1 - Node.js Setup", "course": "5678", "points": 100, "due": "2026-09-30" },
+  { "_id": "a5", "title": "A2 - Express REST APIs", "course": "5678", "points": 100, "due": "2026-10-14" }
+]

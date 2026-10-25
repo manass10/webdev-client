@@ -40,8 +40,6 @@ export default function TailwindResponsiveDesign() {
         </div>
       </div>
 
-      {/* TODO (On your own): personalize the copy/image above, add one more md:/lg: utility */}
-
       <div id="wd-ai-responsive" className="mx-auto mt-6 w-full max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl md:bg-indigo-50">
         <div className="md:flex">
           <div className="relative md:w-48 md:shrink-0">

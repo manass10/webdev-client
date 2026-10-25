@@ -1,0 +1,7 @@
+[
+  { "_id": "m1", "name": "Week 1: Introduction & Setup", "course": "1234" },
+  { "_id": "m2", "name": "Week 2: HTML User Interfaces", "course": "1234" },
+  { "_id": "m3", "name": "Week 3: CSS and Tailwind", "course": "1234" },
+  { "_id": "m4", "name": "Week 1: Node.js Basics", "course": "5678" },
+  { "_id": "m5", "name": "Week 2: Express APIs", "course": "5678" }
+]

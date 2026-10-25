@@ -1,0 +1,36 @@
+.wd-box-red {
+  background-color: #ff7070;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.wd-box-green {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.wd-box-blue {
+  background-color: #7070ff;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.wd-box-yellow {
+  background-color: #ffeb3b;
+  color: black;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.wd-box-purple {
+  background-color: #9c27b0;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.wd-box-orange {
+  background-color: #ff9800;
+  color: black;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}

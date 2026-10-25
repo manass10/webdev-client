@@ -13,7 +13,6 @@ export default function TailwindSpacing() {
         This div has starting padding of 2, top padding of 4, and bottom padding of 8.
       </div>
       <div className="bg-green-200 p-6">This div has padding all around of 6.</div>
-      {/* TODO (On your own): a box mixing mt-*, ps-*, pb-* */}
       <div className="bg-blue-200 mt-6 ps-6 pb-6 p-2">
         TODO: personal directional spacing box
       </div>

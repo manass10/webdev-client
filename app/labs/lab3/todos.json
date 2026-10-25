@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Finish Lab 3", "done": false },
+  { "id": 2, "title": "Push the a3 branch", "done": false },
+  { "id": 3, "title": "Run npm run build before pushing", "done": false },
+  { "id": 4, "title": "Disable Deployment Protection on the a3 preview", "done": true }
+]

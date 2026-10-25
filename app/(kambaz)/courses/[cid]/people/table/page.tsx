@@ -1,130 +1,37 @@
-import { FaUserCircle } from "react-icons/fa";
+import users from "../../../../database/users.json";
+import enrollments from "../../../../database/enrollments.json";
 
-export default function PeopleTable() {
+export default async function PeopleTable({
+  params,
+}: {
+  params: Promise<{ cid: string }>;
+}) {
+  const { cid } = await params;
+  const enrolledUserIds = enrollments
+    .filter((e) => e.course === cid)
+    .map((e) => e.user);
+  const enrolledUsers = users.filter((u) => enrolledUserIds.includes(u._id));
+
   return (
-    <div id="wd-people-table" className="overflow-x-auto">
-      <table className="w-full border-collapse text-left text-sm">
+    <div id="wd-people-table">
+      <table border={1} cellPadding={6}>
         <thead>
-          <tr className="border-b border-neutral-300">
-            <th className="p-2">Name</th>
-            <th className="p-2">Login ID</th>
-            <th className="p-2">Section</th>
-            <th className="p-2">Role</th>
-            <th className="p-2">Last Activity</th>
-            <th className="p-2">Total Activity</th>
+          <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Role</th>
           </tr>
         </thead>
         <tbody>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Tony Stark
-            </td>
-            <td className="p-2">001234561S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2020-10-01</td>
-            <td className="p-2">10:21:32</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Bruce Wayne
-            </td>
-            <td className="p-2">001234562S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2020-11-02</td>
-            <td className="p-2">23:32:23</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Steve Rogers
-            </td>
-            <td className="p-2">001234563S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2020-10-02</td>
-            <td className="p-2">13:21:32</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Natasha Romanoff
-            </td>
-            <td className="p-2">001234564S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">TA</td>
-            <td className="p-2">2020-11-05</td>
-            <td className="p-2">11:22:33</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Manas Salian
-            </td>
-            <td className="p-2">00237472</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2026-09-01</td>
-            <td className="p-2">05:00:00</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Shreyas Sawant
-            </td>
-            <td className="p-2">00237473</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2026-09-02</td>
-            <td className="p-2">06:00:00</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Shriya Mandala
-            </td>
-            <td className="p-2">00237475</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2026-09-03</td>
-            <td className="p-2">07:00:00</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Jane Sample
-            </td>
-            <td className="p-2">009990001S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2026-09-04</td>
-            <td className="p-2">01:00:00</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Alex Sample
-            </td>
-            <td className="p-2">009990002S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2026-09-05</td>
-            <td className="p-2">02:00:00</td>
-          </tr>
-          <tr className="odd:bg-neutral-50">
-            <td className="p-2 text-nowrap">
-              <FaUserCircle className="me-2 inline text-4xl text-neutral-500" />
-              Sam Sample
-            </td>
-            <td className="p-2">009990003S</td>
-            <td className="p-2">S101</td>
-            <td className="p-2">STUDENT</td>
-            <td className="p-2">2026-09-06</td>
-            <td className="p-2">03:00:00</td>
-          </tr>
+          {enrolledUsers.map((u) => (
+            <tr key={u._id}>
+              <td>
+                {u.firstName} {u.lastName}
+              </td>
+              <td>{u.username}</td>
+              <td>{u.role}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

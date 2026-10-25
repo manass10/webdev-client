@@ -21,6 +21,7 @@ export default function CourseCard({
           height={160}
           alt={title}
           className="h-40 w-full object-cover"
+          unoptimized
         />
         <div className="p-4">
           <h5 className="m-0 mb-2 truncate text-lg font-semibold whitespace-nowrap">

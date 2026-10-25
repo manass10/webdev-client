@@ -1,10 +1,10 @@
-import PeopleTable from "./table/page";
+import { redirect } from "next/navigation";
 
-export default function People() {
-  return (
-    <div id="wd-people">
-      <h2 className="mb-3 text-xl font-semibold">People</h2>
-      <PeopleTable />
-    </div>
-  );
+export default async function People({
+  params,
+}: {
+  params: Promise<{ cid: string }>;
+}) {
+  const { cid } = await params;
+  redirect(`/courses/${cid}/people/table`);
 }

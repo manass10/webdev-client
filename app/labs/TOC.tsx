@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-
+import {usePathname} from  "next/navigation";
 export default function TOC() {
   return (
     <div id="wd-toc">
