@@ -1,6 +1,6 @@
 [
-  { "_id": "u1", "username": "manas", "firstName": "Manas", "lastName": "Salian", "role": "STUDENT" },
-  { "_id": "u2", "username": "priya", "firstName": "Priya", "lastName": "Shah", "role": "STUDENT" },
-  { "_id": "u3", "username": "diego", "firstName": "Diego", "lastName": "Alvarez", "role": "STUDENT" },
-  { "_id": "u4", "username": "jannunzi", "firstName": "Jose", "lastName": "Annunziato", "role": "FACULTY" }
+  { "_id": "u1", "username": "manas", "password": "manas123", "firstName": "Manas", "lastName": "Salian", "email": "salian.m@northeastern.edu", "role": "STUDENT", "loginId": "009990010S", "section": "CS5610-01", "lastActivity": "2024-01-15", "totalActivity": "10:05:32" },
+  { "_id": "u2", "username": "priya", "password": "priya123", "firstName": "Priya", "lastName": "Shah", "email": "shah.p@university.edu", "role": "STUDENT", "loginId": "009990011S", "section": "CS5610-01", "lastActivity": "2024-01-14", "totalActivity": "08:22:10" },
+  { "_id": "u3", "username": "diego", "password": "diego123", "firstName": "Diego", "lastName": "Alvarez", "email": "alvarez.d@university.edu", "role": "STUDENT", "loginId": "009990012S", "section": "CS5610-02", "lastActivity": "2024-01-13", "totalActivity": "06:15:45" },
+  { "_id": "u4", "username": "jannunzi", "password": "jannunzi123", "firstName": "Jose", "lastName": "Annunziato", "email": "j.annunziato@university.edu", "role": "FACULTY", "loginId": "009990001F", "section": "CS5610-01", "lastActivity": "2024-01-15", "totalActivity": "25:30:00" }
 ]
