@@ -1,14 +1,4 @@
-import ModulesList from "../modules/ModulesList";
-
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ cid: string }>;
-}) {
-  const { cid } = await params;
-  return (
-    <div id="wd-home">
-      <ModulesList cid={cid} />
-    </div>
-  );
+import Modules from "../modules/page";
+export default function Home() {
+  return <div id="wd-home"><Modules /></div>;
 }
